@@ -1,7 +1,5 @@
 # Währungskonvertierung-Gurps-Gameofthrones
 
-Servus, konnte nicht schlafen.
-hab einen Converter für die Währungen in aSoIaF geschrieben.
 Powershellversion ist commandline only
 Standardmäßig werden keine Monde gerechnet, allerdings gibts hinten einen -md switch mit dem Monde berechnet werden
 Beispiel in und Output:
