@@ -1,1 +1,1 @@
-# W-hrungskonvertierung-Gurps-Gameofthrones
+# Währungskonvertierung-Gurps-Gameofthrones
