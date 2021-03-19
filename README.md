@@ -19,6 +19,7 @@ Commandline - Python:
 Converter.py ist eine Python implementierung der Selben Logik, allerdings noch ohne Commandlineoptionen.
 
 Beispiel in und Output:
+
 python .\Converter.py 40000
 1 Drachen , 147 Hirschen , 1 Sterne
 
