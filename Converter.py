@@ -1,8 +1,16 @@
 import argparse
 import math
 
-gurpsdollar = 40000
-md = True
+parser = argparse.ArgumentParser()
+
+parser.add_argument("num", help="Number of Gurpsdollars to convert.", type=int)
+parser.add_argument("md",nargs='?', help="Switch for Moons.", type=bool)
+
+args = parser.parse_args()
+
+md = False
+gurpsdollar = args.num
+md = args.md
 
 drachendiv = 23520
 mondediv = 784
