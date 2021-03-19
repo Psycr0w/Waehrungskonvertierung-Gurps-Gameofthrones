@@ -16,7 +16,7 @@ Beispiel in und Output:
 ***
 
 Commandline - Python:
-Converter.py ist eine Python implementierung der Selben Logik, allerdings noch ohne Commandlineoptionen.
+Converter.py ist eine Python implementierung der selben Logik, allerdings noch ohne Commandlineoptionen.
 
 Beispiel in und Output:
 
@@ -30,4 +30,4 @@ python .\Converter.py 40000 md
 ***
 GUI:
 
-finalconverter.py ist eine vollständige Implementierung als GUI - Applikation unter zuhilfenahme von PyQT5, QTDesigner und der Basis die durch die Umstellung auf Pythoncode erstellt wurde.
+finalconverter.py ist eine vollständige Implementierung als GUI - Applikation unter Zuhilfenahme von PyQT5, QTDesigner und der Basis die durch die Umstellung auf Pythoncode erstellt wurde.
