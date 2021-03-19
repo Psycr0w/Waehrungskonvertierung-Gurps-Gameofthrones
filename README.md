@@ -9,3 +9,12 @@ Beispiel in und Output:
 
 .\ConverterMonde.exe 40000 -md
 1 Drachen , 21 Monde , 1 Sterne
+
+***
+
+Converter.py ist eine Python implementierung der Selben Logik, allerdings noch ohne Commandlineoptionen.
+
+
+***
+
+finalconverter.py ist eine vollständige Implementierung als GUI - Applikation unter zuhilfenahme von PyQT5, QT5Designer und der Basis die durch die Umstellung auf Pythoncode erstellt wurde.
