@@ -1,15 +1,15 @@
 import argparse
-import math
+from math import floor
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument("num", help="Number of Gurpsdollars to convert.", type=int)
+parser.add_argument("num", help="Number of Gurpsdollars to convert.", type=float)
 parser.add_argument("md",nargs='?', help="Switch for Moons.", type=bool)
 
 args = parser.parse_args()
 
 md = False
-gurpsdollar = args.num
+gurpsdollar = args.num * 4
 md = args.md
 
 drachendiv = 23520
@@ -23,24 +23,24 @@ penniesdiv = 2
 monde = 0
 monddolar = 0
 
-drachen = math.floor(gurpsdollar / drachendiv)
+drachen = floor(gurpsdollar / drachendiv)
 drachendollar = drachen * drachendiv
 
 
 if md == True:
-    monde = math.floor((gurpsdollar - drachendollar) / mondediv)
+    monde = floor((gurpsdollar - drachendollar) / mondediv)
     monddolar = monde * mondediv
 
 
-hirschen = math.floor((gurpsdollar - drachendollar - monddolar) / hirschendiv)
+hirschen = floor((gurpsdollar - drachendollar - monddolar) / hirschendiv)
 hirschdollar = hirschen * hirschendiv
-sterne = math.floor((gurpsdollar - drachendollar - monddolar - hirschdollar) / sternediv)
+sterne = floor((gurpsdollar - drachendollar - monddolar - hirschdollar) / sternediv)
 sterndollar = sterne * sternediv
-groschen = math.floor((gurpsdollar - drachendollar  - monddolar - hirschdollar - sterndollar) / groschendiv)
+groschen = floor((gurpsdollar - drachendollar  - monddolar - hirschdollar - sterndollar) / groschendiv)
 groschendollar = groschen * groschendiv
-halbgroschen = math.floor((gurpsdollar - drachendollar  - monddolar - hirschdollar - sterndollar - groschendollar) / halbgroschendiv)
+halbgroschen = floor((gurpsdollar - drachendollar  - monddolar - hirschdollar - sterndollar - groschendollar) / halbgroschendiv)
 halbgroschendollar = halbgroschen * halbgroschendiv
-pennies = math.floor((gurpsdollar - drachendollar  - monddolar - hirschdollar - sterndollar - groschendollar - halbgroschendollar) / penniesdiv)
+pennies = floor((gurpsdollar - drachendollar  - monddolar - hirschdollar - sterndollar - groschendollar - halbgroschendollar) / penniesdiv)
 penniesdollar = pennies * penniesdiv
 halbpennies = gurpsdollar - drachendollar  - monddolar - hirschdollar - sterndollar - groschendollar - halbgroschendollar - penniesdollar
 
