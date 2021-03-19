@@ -1,5 +1,7 @@
 # Währungskonvertierung-Gurps-Gameofthrones
 
+Kleines Programm zur Umrechnung von Gurps-Dollar zu den A Song of Ice and Fire Währungen.
+***
 Commandline - Powershell:
 Standardmäßig werden keine Monde gerechnet, allerdings gibts hinten einen -md switch mit dem Monde berechnet werden
 Beispiel in und Output:
