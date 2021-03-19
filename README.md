@@ -30,4 +30,4 @@ python .\Converter.py 40000 md
 ***
 GUI:
 
-finalconverter.py ist eine vollständige Implementierung als GUI - Applikation unter Zuhilfenahme von PyQT5, QTDesigner und der Basis die durch die Umstellung auf Pythoncode erstellt wurde.
+finalconverter.py ist eine vollständige Implementierung als GUI - Applikation unter Zuhilfenahme von PyQT5, QTDesigner und der Basis die durch die Umstellung auf Python erstellt wurde.
