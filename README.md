@@ -1,6 +1,6 @@
 # Währungskonvertierung-Gurps-Gameofthrones
 
-Powershellversion ist commandline only
+Commandline - Powershell:
 Standardmäßig werden keine Monde gerechnet, allerdings gibts hinten einen -md switch mit dem Monde berechnet werden
 Beispiel in und Output:
 
@@ -12,9 +12,11 @@ Beispiel in und Output:
 
 ***
 
+Commandline - Python:
 Converter.py ist eine Python implementierung der Selben Logik, allerdings noch ohne Commandlineoptionen.
 
 
 ***
+GUI:
 
-finalconverter.py ist eine vollständige Implementierung als GUI - Applikation unter zuhilfenahme von PyQT5, QT5Designer und der Basis die durch die Umstellung auf Pythoncode erstellt wurde.
+finalconverter.py ist eine vollständige Implementierung als GUI - Applikation unter zuhilfenahme von PyQT5, QTDesigner und der Basis die durch die Umstellung auf Pythoncode erstellt wurde.
