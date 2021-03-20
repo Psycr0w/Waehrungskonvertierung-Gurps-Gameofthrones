@@ -99,24 +99,38 @@ def clicked():
         penniesdollar = pennies * penniesdiv
         halbpennies = gurpsdollar - drachendollar  - monddolar - hirschdollar - sterndollar - groschendollar - halbgroschendollar - penniesdollar
 
-        currency =["Drachen", "Monde", "Hirschen", "Sterne", "Groschen", "Halbgroschen", "Pennies", "Halbpennies"]
 
-        value = [drachen,monde,hirschen,sterne,groschen,halbgroschen,pennies,halbpennies]
 
-        array = []
+        
+        singulare = ["Drache", "Mond", "Hirsch", "Stern", "Groschen", "Halbgroschen", "Penny", "Halbpenny"]
+        plurale = ["Drachen", "Monde", "Hirsche", "Sterne", "Groschen", "Halbgroschen", "Pennies", "Halbpennies"]
+        gewichte = [0.2, 0.14, 0.02, 0.04, 0.2, 0.1, 0.005, 0.0025]
+        verhaeltnisse = [1, 30, 7, 7, 2, 2, 2, 2]
+        values = [drachen, monde, hirschen, sterne, groschen, halbgroschen, pennies, halbpennies]
+        
 
-        for i in range(0,len(currency)):
-            if value[i] != 0:
+        stringer = "hithar"
+        finalgewicht = 0
+        for  i in range(len(singulare)):
+            singular ,plural, gewicht, verhaeltnis, value = (singulare[i], plurale[i], gewichte[i], verhaeltnisse[i], values[i])
             
-                val = value[i]
-                cur = currency[i]
-                array.append(f"{val} {cur}")
-
-
-        stringer = " , ".join(array)
-        ui.textEdit_2.setText(stringer)
+            if value != 0:
+                if stringer == "hithar":
+                    stringer = ""
+                else:
+                    stringer = stringer + ", "
+                stringer = stringer + str(value) + " " 
+                if value == 1:
+                    stringer = stringer + singular
+                else:
+                    stringer = stringer + plural
+                finalgewicht = finalgewicht + gewicht
+        
+        ui.textEdit_2.setText(stringer + "\n" + str(finalgewicht))
+    
     except:
-        print("An error occurred")
+        print("An error occurred" + Exception)
+        print(stringer)
 
 if __name__ == "__main__":
     import sys
