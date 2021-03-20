@@ -126,7 +126,7 @@ def clicked():
                     stringer = stringer + plural
                 finalgewicht = finalgewicht + gewicht
         
-        ui.textEdit_2.setText(stringer + "\n" + str(finalgewicht))
+        ui.textEdit_2.setText(stringer + "\n" + str(finalgewicht) + "lb")
     
     except:
         print("An error occurred" + Exception)
