@@ -101,19 +101,20 @@ def clicked():
 
 
 
-        
-        singulare = ["Drache", "Mond", "Hirsch", "Stern", "Groschen", "Halbgroschen", "Penny", "Halbpenny"]
-        plurale = ["Drachen", "Monde", "Hirsche", "Sterne", "Groschen", "Halbgroschen", "Pennies", "Halbpennies"]
-        gewichte = [0.2, 0.14, 0.02, 0.04, 0.2, 0.1, 0.005, 0.0025]
-        verhaeltnisse = [1, 30, 7, 7, 2, 2, 2, 2]
-        values = [drachen, monde, hirschen, sterne, groschen, halbgroschen, pennies, halbpennies]
-        
+        d = {
+            "singulare" : ["Drache", "Mond", "Hirsch", "Stern", "Groschen", "Halbgroschen", "Penny", "Halbpenny"],
+            "plurale" : ["Drachen", "Monde", "Hirsche", "Sterne", "Groschen", "Halbgroschen", "Pennies", "Halbpennies"],
+            "gewichte" : [0.2, 0.14, 0.02, 0.04, 0.2, 0.1, 0.005, 0.0025],
+            "verhaeltnisse" : [1, 30, 7, 7, 2, 2, 2, 2],
+            "values" : [drachen, monde, hirschen, sterne, groschen, halbgroschen, pennies, halbpennies]
+            }
 
         stringer = "hithar"
-        finalgewicht = 0
-        for  i in range(len(singulare)):
-            singular ,plural, gewicht, verhaeltnis, value = (singulare[i], plurale[i], gewichte[i], verhaeltnisse[i], values[i])
-            
+        finalgewicht = 0.0
+
+        for i in range(8):
+            singular, plural, gewicht, verhaeltnis, value = (d["singulare"][i], d["plurale"][i], d["gewichte"][i], d["verhaeltnisse"][i], d["values"][i])
+            print(singular, plural, gewicht, verhaeltnis, value)
             if value != 0:
                 if stringer == "hithar":
                     stringer = ""
@@ -124,10 +125,10 @@ def clicked():
                     stringer = stringer + singular
                 else:
                     stringer = stringer + plural
-                finalgewicht = finalgewicht + gewicht
-        
-        ui.textEdit_2.setText(stringer + "\n" + str(finalgewicht) + "lb")
-    
+                finalgewicht = finalgewicht + gewicht * value
+
+                ui.textEdit_2.setText(stringer + "\n" + str(finalgewicht) + "lb")
+
     except:
         print("An error occurred" + Exception)
         print(stringer)
